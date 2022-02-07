@@ -1,7 +1,7 @@
 name: hpf_cli
 description: A command-line application.
 version: 1.0.0
-# homepage: https://www.example.com
+homepage: https://github.com/dohoan259/hpf
 
 environment:
   sdk: '>=2.15.1 <3.0.0'

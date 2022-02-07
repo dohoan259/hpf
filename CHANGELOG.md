@@ -5,3 +5,8 @@
 ## 1.0.0+1
 
 - remove redundant code
+
+## 1.0.0+2
+
+- wrong import controller folder 
+- add buildX command

@@ -14,8 +14,9 @@ class PageSample extends Sample {
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:${PubspecUtils.projectName}/presentation/base/base_page.dart';
-import 'package:${PubspecUtils.projectName}/presentation/controllers/${_viewName.snakeCase}_controller.dart';
+import 'package:${PubspecUtils.projectName}/presentation/controller/${_viewName.snakeCase}_controller.dart';
 import 'package:${PubspecUtils.projectName}/presentation/state/${_viewName.snakeCase}_state.dart';
+import 'package:${PubspecUtils.projectName}/presentation/view/widgets/app_app_bar.dart';
 ''';
 
   @override
@@ -27,7 +28,7 @@ class ${_viewName.pascalCase}Page extends BasePage<${_viewName.pascalCase}Contro
 @override
   Widget builder(BuildContext context) {
     return Scaffold(
-      appBar: AppAppBar(title: 'title'),
+      appBar: AppAppBar(title: 'app_name'.tr()),
       body: SingleChildScrollView(
         physics: const ClampingScrollPhysics(),
         child: Container(),

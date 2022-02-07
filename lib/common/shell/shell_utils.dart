@@ -26,6 +26,13 @@ class ShellUtils {
         verbose: true);
   }
 
+  static Future<void> buildX() async {
+    print('Running `flutter pub get` …');
+    await run(
+        'flutter packages pub run build_runner build --delete-conflicting-outputs',
+        verbose: true);
+  }
+
   // static Future<void> update(
   //     [bool isGit = false, bool forceUpdate = false]) async {
   //   isGit = GetCli.arguments.contains('--git');

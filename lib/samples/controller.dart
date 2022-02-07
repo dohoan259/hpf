@@ -10,10 +10,7 @@ class ControllerSample extends Sample {
 
   final String _fileName;
 
-  String get import =>
-      '''import 'package:${PubspecUtils.projectName}/presentation/base/base_state.dart';
-  
-  import 'package:injectable/injectable.dart';
+  String get import => '''import 'package:injectable/injectable.dart';
 import 'package:${PubspecUtils.projectName}/common/error_entity.dart';
 import 'package:${PubspecUtils.projectName}/presentation/base/base_controller.dart';
 import 'package:${PubspecUtils.projectName}/presentation/base/screen_status.dart';

@@ -1,6 +1,6 @@
 name: hpf_cli
 description: A command-line application.
-version: 1.0.0
+version: 1.0.0+1
 homepage: https://github.com/dohoan259/hpf
 
 environment:

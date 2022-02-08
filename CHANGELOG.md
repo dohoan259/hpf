@@ -10,3 +10,7 @@
 
 - wrong import controller folder 
 - add buildX command
+
+## 1.0.0+3
+
+- remove redundant command

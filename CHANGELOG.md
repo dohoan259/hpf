@@ -18,3 +18,6 @@
 
 - create project
 - create screen
+
+## 1.0.0+4
+- fig bug create project

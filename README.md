@@ -39,11 +39,11 @@ hpf create -uc get_user_info
 ```
 
 // To create a repository:\n
-// Note: you can use any name, ex: `hpf create repo:user_repository`\n
+// Note: you can use any name, ex: `hpf create repo:user`\n
 ```
-hpf create repo:user_repository
+hpf create repo:user
 ```
 or
 ```
-hpf create -rp user_repository
+hpf create -rp user
 ```

@@ -13,7 +13,7 @@ class Structure {
     // 'controller': replaceAsExpected(path: 'lib/presentation//views/controller'),
     // 'state': replaceAsExpected(path: 'lib/presentation/state'),
     'route': replaceAsExpected(path: 'lib/presentation/routers/'),
-    'use_case': replaceAsExpected(path: 'lib/domain/use_cases/'),
+    'use_case': replaceAsExpected(path: 'lib/domain/use_cases'),
     'entity': replaceAsExpected(path: 'lib/domain/entities/'),
     'repository': replaceAsExpected(path: 'lib/domain/repositories'),
     'repository_impl': replaceAsExpected(path: 'lib/data/repositories'),

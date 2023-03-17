@@ -21,3 +21,6 @@
 
 ## 1.0.0+5
 - fig bug create project
+
+## 1.0.0+6
+- create repo and use case

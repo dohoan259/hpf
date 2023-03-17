@@ -1,11 +1,13 @@
 import 'package:hpf_cli/samples/sample.dart';
 
+import '../common/pubspec/pubspec_utils.dart';
+
 class ProviderMainSample extends Sample {
   final bool? isServer;
   ProviderMainSample({this.isServer}) : super('lib/main.dart', overwrite: true);
 
   String get _flutterMain =>
-      '''import 'package:breaking_new/presentation/routers/routers.gr.dart';
+      '''import 'package:${PubspecUtils.projectName}/presentation/routers/routers.gr.dart';
 import 'package:flutter/material.dart';
 
 import 'di/di.dart';

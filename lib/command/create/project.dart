@@ -55,13 +55,6 @@ class CreateProjectCommand extends Command {
 
     var androidLang = androidResult.index == 0 ? 'kotlin' : 'java';
 
-    final nullSafeMenu = Menu(
-        [LocaleKeys.options_yes.tr, LocaleKeys.options_no.tr],
-        title: LocaleKeys.ask_use_null_safe.tr);
-    final nullSafeMenuResult = nullSafeMenu.choose();
-
-    var useNullSafe = nullSafeMenuResult.index == 0;
-
     final linterMenu = Menu([
       'no',
       'Pedantic [Deprecated]',
@@ -74,18 +67,16 @@ class CreateProjectCommand extends Command {
 
     File('test/widget_test.dart').writeAsStringSync('');
 
-    if (useNullSafe) {
-      await ShellUtils.activatedNullSafe();
-    }
     switch (linterResult.index) {
       case 1:
-        PubspecUtils.addDependencies('pedantic', isDev: true, runPubGet: false);
+        await PubspecUtils.addDependencies('pedantic',
+            isDev: true, runPubGet: false);
         AnalysisOptionsSample(
                 include: 'include: package:pedantic/analysis_options.yaml')
             .create();
         break;
       case 2:
-        PubspecUtils.addDependencies('effective_dart',
+        await PubspecUtils.addDependencies('effective_dart',
             isDev: true, runPubGet: false);
         AnalysisOptionsSample(
             include: 'include: package:effective_dart/analysis_options.yaml');
@@ -100,6 +91,45 @@ class CreateProjectCommand extends Command {
       default:
         AnalysisOptionsSample().create();
     }
+
+    // build runner
+    await PubspecUtils.addDependencies('build_runner',
+        isDev: true, runPubGet: false);
+
+    // localization
+    await PubspecUtils.addDependencies('easy_localization',
+        isDev: false, runPubGet: false, version: '3.0.1');
+
+    // DI
+    await PubspecUtils.addDependencies('get_it',
+        isDev: false, runPubGet: false, version: '7.2.0');
+    await PubspecUtils.addDependencies('injectable',
+        isDev: false, runPubGet: false, version: '2.1.0');
+    await PubspecUtils.addDependencies('injectable_generator',
+        isDev: true, runPubGet: false, version: '2.1.4');
+
+    // Provider
+    await PubspecUtils.addDependencies('provider',
+        isDev: false, runPubGet: false, version: '6.0.5');
+    await PubspecUtils.addDependencies('state_notifier',
+        isDev: false, runPubGet: false, version: '0.7.2+1');
+    await PubspecUtils.addDependencies('flutter_state_notifier',
+        isDev: false, runPubGet: false, version: '0.7.3');
+
+    // router
+    await PubspecUtils.addDependencies('auto_route',
+        isDev: false, runPubGet: false, version: '5.0.4');
+    await PubspecUtils.addDependencies('auto_route_generator',
+        isDev: true, runPubGet: false, version: '5.0.3');
+
+    // freezed
+    await PubspecUtils.addDependencies('freezed_annotation',
+        isDev: false, runPubGet: false, version: '2.2.0');
+    await PubspecUtils.addDependencies('freezed',
+        isDev: true, runPubGet: false, version: '2.3.2');
+
+    // create
+
     await InitCommand().execute();
   }
 

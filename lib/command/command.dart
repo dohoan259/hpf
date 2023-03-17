@@ -6,7 +6,11 @@ abstract class Command with ArgsMixin {
   List<String> get alias => [];
 
   /// execute command
-  Future<void> execute();
+  Future<void> execute() async {
+    // if (commandName != 'init' && commandName != 'project') {
+    //   await ShellUtils.buildX();
+    // }
+  }
 
   /// children command
   List<Command> get children => [];

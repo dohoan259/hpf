@@ -13,7 +13,8 @@ class ControllerSample extends Sample {
   String get import => '''import 'package:injectable/injectable.dart';
 import 'package:${PubspecUtils.projectName}/domain/entities/error_entity.dart';
 import 'package:${PubspecUtils.projectName}/presentation/base/base_controller.dart';
-import 'package:${PubspecUtils.projectName}/presentation/state/${_fileName.snakeCase}_state.dart';
+import 'package:${PubspecUtils.projectName}/presentation/base/base_state.dart';
+import '${_fileName.snakeCase}_state.dart';
 
   ''';
 

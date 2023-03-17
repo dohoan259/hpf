@@ -4,9 +4,10 @@ import 'package:hpf_cli/command/command.dart';
 import 'package:hpf_cli/core/structure.dart';
 import 'package:hpf_cli/functions/create/create_single_file.dart';
 import 'package:hpf_cli/samples/controller.dart';
-import 'package:hpf_cli/samples/page.dart';
 import 'package:hpf_cli/samples/state.dart';
 import 'package:recase/recase.dart';
+
+import '../../samples/screen.dart';
 
 class CreateScreenCommand extends Command {
   @override
@@ -50,10 +51,10 @@ class CreateScreenCommand extends Command {
     );
     handleFileCreate(
       name,
-      'page',
+      'screen',
       path,
       extraFolder,
-      PageSample(
+      ScreenSample(
         '',
         name,
       ),

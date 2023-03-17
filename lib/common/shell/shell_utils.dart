@@ -6,6 +6,11 @@ class ShellUtils {
     await run('flutter pub get', verbose: true);
   }
 
+  static Future<void> changeDir(String dir) async {
+    print('Running `cd $dir` …');
+    await run('cd $dir', verbose: true);
+  }
+
   static Future<void> activatedNullSafe() async {
     await pubGet();
     await run('dart migrate --apply-changes --skip-import-check',

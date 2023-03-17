@@ -14,7 +14,7 @@ class StateSample extends Sample {
       '''import 'package:${PubspecUtils.projectName}/presentation/base/base_state.dart';
   
   import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:${PubspecUtils.projectName}/presentation/base/screen_status.dart';
+import '../../../../domain/entities/error_entity.dart';
 
 part '${_fileName.snakeCase}_state.freezed.dart';
 

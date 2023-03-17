@@ -16,7 +16,6 @@ import 'package:flutter/material.dart';
 import 'package:${PubspecUtils.projectName}/presentation/base/base_screen.dart';
 import 'package:${PubspecUtils.projectName}/presentation/views/screens/$_viewName/${_viewName.snakeCase}_controller.dart';
 import 'package:${PubspecUtils.projectName}/presentation/views/screens/$_viewName/${_viewName.snakeCase}_state.dart';
-import 'package:${PubspecUtils.projectName}/presentation/view/widgets/app_app_bar.dart';
 ''';
 
   @override
@@ -29,10 +28,10 @@ ${_viewName.pascalCase}Screen({Key? key}) : super(key: key);
 @override
   Widget builder(BuildContext context) {
     return Scaffold(
-      appBar: AppAppBar(title: 'app_name'.tr()),
-      body: SingleChildScrollView(
+      appBar: AppBar(title: Text('app_name'.tr())),
+      body: const SingleChildScrollView(
         physics: const ClampingScrollPhysics(),
-        child: Container(),
+        child: Text('$_viewName'),
       ),
     );
   }

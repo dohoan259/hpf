@@ -52,7 +52,6 @@ class PubspecUtils {
   static Future<bool> addDependencies(String package,
       {String? version, bool isDev = false, bool runPubGet = true}) async {
     var pubSpec = PubSpec.fromYamlString(_pubspecFile.readAsStringSync());
-
     version = version == null || version.isEmpty
         ? await PubDevApi.getLatestVersionFromPackage(package)
         : '^$version';
@@ -62,7 +61,6 @@ class PubspecUtils {
     } else {
       pubSpec.dependencies[package] = HostedReference.fromJson(version);
     }
-
     _savePub(pubSpec);
     if (runPubGet) await ShellUtils.pubGet();
     return true;

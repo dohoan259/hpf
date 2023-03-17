@@ -26,8 +26,9 @@ part '${_fileName.snakeCase}_state.freezed.dart';
 @freezed
 class ${_fileName.pascalCase}State extends BaseState with _\$${_fileName.pascalCase}State {
   factory ${_fileName.pascalCase}State({
-    @Default(ScreenStatus.Uninitialized) ScreenStatus status,
+    @Default(ScreenStatus.uninitialized) ScreenStatus screenStatus,
     @Default(false) bool processing,
+    @Default(null) ErrorEntity? errorEntity,
   }) = _${_fileName.pascalCase}State;
 }
 ''';

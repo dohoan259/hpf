@@ -7,12 +7,12 @@ import 'file_model.dart';
 
 class Structure {
   static final Map<String, String> _paths = {
-    'page': replaceAsExpected(path: 'lib/presentation/view/screens/'),
-    'widget': replaceAsExpected(path: 'lib/presentation/view/widgets/'),
+    'page': replaceAsExpected(path: 'lib/presentation/views/screens/'),
+    'widget': replaceAsExpected(path: 'lib/presentation/views/widgets/'),
     'controller': replaceAsExpected(path: 'lib/presentation/controller'),
     'state': replaceAsExpected(path: 'lib/presentation/state'),
     'route': replaceAsExpected(path: 'lib/presentation/router/'),
-    'repository': replaceAsExpected(path: 'lib/data/'),
+    'repository': replaceAsExpected(path: 'lib/data/repositories'),
   };
 
   static Map<String, String> get paths => _paths;

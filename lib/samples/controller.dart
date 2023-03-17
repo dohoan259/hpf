@@ -11,9 +11,8 @@ class ControllerSample extends Sample {
   final String _fileName;
 
   String get import => '''import 'package:injectable/injectable.dart';
-import 'package:${PubspecUtils.projectName}/common/error_entity.dart';
+import 'package:${PubspecUtils.projectName}/domain/entities/error_entity.dart';
 import 'package:${PubspecUtils.projectName}/presentation/base/base_controller.dart';
-import 'package:${PubspecUtils.projectName}/presentation/base/screen_status.dart';
 import 'package:${PubspecUtils.projectName}/presentation/state/${_fileName.snakeCase}_state.dart';
 
   ''';
@@ -27,7 +26,8 @@ class ${_fileName.pascalCase}Controller extends BaseController<${_fileName.pasca
 
   @override
   Future<ErrorEntity?> loadData() async {
-    state = state.copyWith(status: ScreenStatus.Loaded);
+    state = state.copyWith(screenStatus: ScreenStatus.loaded);
+    return null;
   }
 }
 ''';

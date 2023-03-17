@@ -1,6 +1,8 @@
 import 'command.dart';
 import 'command_parent.dart';
 import 'create/page.dart';
+import 'create/project.dart';
+import 'create/screen.dart';
 
 final List<Command> commands = [
   CommandParent(
@@ -8,7 +10,8 @@ final List<Command> commands = [
     [
       // CreateControllerCommand(),
       CreatePageCommand(),
-      // CreateProjectCommand(),
+      CreateScreenCommand(),
+      CreateProjectCommand(),
       // CreateProviderCommand(),
       // CreateScreenCommand(),
       // CreateViewCommand()

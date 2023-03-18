@@ -7,43 +7,49 @@ I refer (get cli)[https://pub.dev/packages/get_cli] to make this cli
 pub global activate hpf_cli
 ```
 
-// To create a project:\n
-// Note: you can use any name, ex: `hpf create project:movie`\n
+// To create a project:
+
+// Note: you can use any name, ex: `hpf create project:movie`
 ```
 hpf create project:movie
 ```
-or\n
+or
 ```
 hpf create -p movie
 ```
 
-// To create a screen:\n
-// (Screen have controller, state)\n
-// Note: you can use any name, ex: `hpf create screen:login`\n
+// To create a screen:
+
+// (Screen have controller, state)
+
+// Note: you can use any name, ex: `hpf create screen:login`
 ```
 hpf create screen:home
 ```
-or\n
+or
 ```
 hpf create -sn home
 ```
 
-// To create an use case:\n
-// Note: you can use any name, ex: `hpf create use_case:get_user_info`\n
+// To create an use case:
+
+// Note: you can use any name, ex: `hpf create use_case:get_user_info`
 ```
 hpf create use_case:get_user_info
 ```
-or\n
+or
 ```
 hpf create -uc get_user_info
 ```
 
-// To create a repository:\n
-// Note: you can use any name, ex: `hpf create repo:user`\n
+// To create a repository:
+
+// Note: you can use any name, ex: `hpf create repo:user`
+
 ```
 hpf create repo:user
 ```
-or\n
+or
 ```
 hpf create -rp user
 ```

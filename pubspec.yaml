@@ -1,6 +1,6 @@
 name: hpf_cli
-description: A command-line application.
-version: 1.0.0+6
+description: the dart cli support the user create the flutter application follow clean architecture. Presentattion layer use Provider state management.
+version: 1.0.0+4
 homepage: https://github.com/dohoan259/hpf
 
 environment:

@@ -12,7 +12,7 @@ pub global activate hpf_cli
 ```
 hpf create project:movie
 ```
-or
+or\n
 ```
 hpf create -p movie
 ```
@@ -23,7 +23,7 @@ hpf create -p movie
 ```
 hpf create screen:home
 ```
-or
+or\n
 ```
 hpf create -sn home
 ```
@@ -33,7 +33,7 @@ hpf create -sn home
 ```
 hpf create use_case:get_user_info
 ```
-or
+or\n
 ```
 hpf create -uc get_user_info
 ```
@@ -43,7 +43,7 @@ hpf create -uc get_user_info
 ```
 hpf create repo:user
 ```
-or
+or\n
 ```
 hpf create -rp user
 ```

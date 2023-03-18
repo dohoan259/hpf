@@ -19,8 +19,6 @@ File handleFileCreate(String name, String command, String? on, bool extraFolder,
   var path = '${fileModel.path}$sep${fileModel.commandName}.dart';
   sample.path = path;
 
-  print('hoan.dv: sample path: ${sample.path}');
-
   return sample.create();
 }
 

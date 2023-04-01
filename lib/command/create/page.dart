@@ -4,9 +4,10 @@ import 'package:hpf_cli/command/command.dart';
 import 'package:hpf_cli/core/structure.dart';
 import 'package:hpf_cli/functions/create/create_single_file.dart';
 import 'package:hpf_cli/samples/controller.dart';
-import 'package:hpf_cli/samples/page.dart';
 import 'package:hpf_cli/samples/state.dart';
 import 'package:recase/recase.dart';
+
+import '../../samples/page.dart';
 
 class CreatePageCommand extends Command {
   @override
@@ -24,17 +25,12 @@ class CreatePageCommand extends Command {
     pathSplit.removeLast();
     var path = pathSplit.join('/');
     path = Structure.replaceAsExpected(path: path);
-    final stateDir = Structure.paths['state']!;
-    final controllerDir = Structure.paths['controller']!;
     Directory(path).createSync(recursive: true);
-    Directory(stateDir).createSync(recursive: true);
-    Directory(controllerDir).createSync(recursive: true);
     var extraFolder = true;
-
     handleFileCreate(
       name,
       'state',
-      stateDir,
+      path,
       extraFolder,
       StateSample(
         '',
@@ -45,7 +41,7 @@ class CreatePageCommand extends Command {
     handleFileCreate(
       name,
       'controller',
-      controllerDir,
+      path,
       extraFolder,
       ControllerSample(
         '',
@@ -55,7 +51,7 @@ class CreatePageCommand extends Command {
     );
     handleFileCreate(
       name,
-      'page',
+      'screen',
       path,
       extraFolder,
       PageSample(

@@ -1,5 +1,5 @@
 A command line app helps to generate a flutter project follows Clean architecture + Provider
-I refered (get cli)[https://pub.dev/packages/get_cli] to make this cli
+I referred (get cli)[https://pub.dev/packages/get_cli] to make this cli
 
 
 // To install:
